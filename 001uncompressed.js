@@ -17,3 +17,11 @@ const uncompress = (s) => {
   }
   return result
 };
+// example 1
+console.log(uncompress("2c3a1t")); // -> 'ccaaat')
+
+// example 2
+console.log(uncompress("4s2b")); // -> 'ssssbb'
+
+// example 3
+console.log(uncompress("2p1o5p")); // -> 'ppoppppp'

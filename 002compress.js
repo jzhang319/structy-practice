@@ -21,5 +21,11 @@ const compress = (s) => {
   }
   return result.join("");
 };
-
+// example 1
 console.log(compress("ccaaatsss")); // -> '2c3at3s'
+
+// example 2
+console.log(compress('ssssbbz')); // -> '4s2bz'
+
+// example 3
+console.log(compress('ppoppppp')); // -> '2po5p'

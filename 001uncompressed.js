@@ -1,7 +1,6 @@
 const uncompress = (s) => {
   // todo
-  // console.log(s)
-  numbers = '0123456789'
+  const numbers = '0123456789'
   let result = ''
   let i = 0, j = 0
   while (j < s.length){

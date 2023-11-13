@@ -23,3 +23,4 @@ console.log(mostFrequentChar('bookeeper')); // -> 'e'
 console.log(mostFrequentChar('david')); // -> 'd'
 console.log(mostFrequentChar('abby')); // -> 'b'
 console.log(mostFrequentChar('mississippi')); // -> 'i'
+

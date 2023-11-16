@@ -13,7 +13,7 @@ b.next = c;
 //     this.next = null;
 //   }
 // }
-
+// time: O(n) space: O(1)
 const isUnivalueList = (head) => {
   // todo
   let current = head;

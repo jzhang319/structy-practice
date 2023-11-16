@@ -16,7 +16,19 @@ b.next = c;
 
 const isUnivalueList = (head) => {
   // todo
-  
+  let current = head;
+  let value = head.val;
+
+  while (current !== null) {
+    if (current.val !== value) {
+      // console.log(current.val)
+      // console.log(current.next)
+      return false;
+    } else {
+      current = current.next;
+    }
+  }
+  return true;
 };
 
 isUnivalueList(a); // true

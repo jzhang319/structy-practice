@@ -18,6 +18,27 @@ class Node {
 
 const insertNode = (head, value, index) => {
   // todo
+  let current = head
+  let i = 0
+  let newNode = new Node(value)
+
+  if (index === 0){
+    newNode.next = head
+    return newNode
+  }
+
+  // console.log(typeof(value))
+  while (current !== null){
+
+    if (index - 1 === i){
+      newNode.next = current.next
+      current.next = newNode
+    }
+    i += 1
+    current = current.next
+
+  }
+  return head
 };
 
 insertNode(a, 'x', 2);

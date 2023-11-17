@@ -17,9 +17,21 @@ c.right = f;
 //  / \     \
 // d   e     f
 
+// no recursion for breadth first traversals
 const breadthFirstValues = (root) => {
   // todo
-  
+  if(root === null) return [];
+
+  const queue = [root];
+  const result = [];
+
+  while(queue.length > 0){
+    const current = queue.shift();
+    result.push(current.val);
+    if(current.left) queue.push(current.left);
+    if(current.right) queue.push(current.right);
+  }
+  return result;
 };
 
 breadthFirstValues(a);

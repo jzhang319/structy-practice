@@ -21,7 +21,7 @@ e.right = g;
 //      / \
 //     1   3
 
-maxPathSum(a); // -> 59
+
 
 // class Node {
 //   constructor(val) {
@@ -40,4 +40,4 @@ const maxPathSum = (root) => {
   return root.val + maxChildSum
 };
 
-maxPathSum(a); // -> 18
+maxPathSum(a); // -> 59

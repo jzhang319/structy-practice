@@ -27,7 +27,16 @@ c.right = f;
 
 const treeSum = (root) => {
   // todo
-  
+  if (root === null) return 0;
+  const stack = [root];
+  let sum = 0;
+  while (stack.length > 0) {
+    const current = stack.shift();
+    sum += current.val;
+    if (current.left) stack.push(current.left);
+    if (current.right) stack.push(current.right);
+  }
+  return sum
 };
 
 treeSum(a); // -> 21

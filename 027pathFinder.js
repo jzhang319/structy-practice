@@ -33,6 +33,13 @@ f.right = h;
 
 const pathFinder = (root, target) => {
   // todo
+  if (root === null) return null;
+  const path = [];
+
+  pathFinder(root.left)
+  pathFinder(root.right)
+  
+  return [root.val, ...path];
 };
 
 pathFinder(a, "c"); // -> ['a', 'c']

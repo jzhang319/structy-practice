@@ -27,6 +27,14 @@ c.right = f;
 
 const bottomRightValue = (root) => {
   // todo
+  const queue = [root];
+
+  while (queue.length > 0) {
+    const current = queue.shift();
+    if (current.right) queue.push(current.right);
+    if (current.left) queue.push(current.left);
+    if (queue.length === 0) return current.val;
+  }
 };
 
 bottomRightValue(a); // -> 1

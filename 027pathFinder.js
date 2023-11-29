@@ -34,12 +34,52 @@ f.right = h;
 const pathFinder = (root, target) => {
   // todo
   if (root === null) return null;
-  const path = [];
+  if (root.val === target) return [root.val]
 
-  pathFinder(root.left)
-  pathFinder(root.right)
-  
-  return [root.val, ...path];
+  const leftPath = pathFinder(root.left, target)
+  if (leftPath !== null){
+    return [root.val, ...leftPath] // <--------
+  }
+
+  const rightPath = pathFinder(root.right, target)
+  if (rightPath !== null){
+    return [root.val, ...rightPath] // <--------
+  }
+
+  return null
 };
 
 pathFinder(a, "c"); // -> ['a', 'c']
+
+
+// when tree is extremely long, this has an O(n) runtime while the 1st solution
+// has an O(n^2) runtime because of the spread operator
+
+// const pathFinder = (root, target) => {
+//   const result = pathFinderHelper(root, target);a
+//   if (result === null) {
+//     return null;
+//   } else {
+//     return result.reverse();
+//   }
+// };
+
+// const pathFinderHelper = (root, target) => {
+//   // todo
+//   if (root === null) return null;
+//   if (root.val === target) return [root.val];
+
+//   const leftPath = pathFinderHelper(root.left, target);
+//   if (leftPath !== null) {
+//     leftPath.push(root.val);
+//     return leftPath;
+//   }
+
+//   const rightPath = pathFinderHelper(root.right, target);
+//   if (rightPath !== null) {
+//     rightPath.push(root.val);
+//     return rightPath;
+//   }
+
+//   return null;
+// };

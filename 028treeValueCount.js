@@ -27,6 +27,17 @@ c.right = f;
 
 const treeValueCount = (root, target) => {
   // todo
+  if (root === null) return 0;
+  let occur = 0
+  const stack = [root];
+  while (stack.length > 0) {
+    const current = stack.shift();
+    if (current.val === target) occur++;
+
+    if (current.left) stack.push(current.left);
+    if (current.right) stack.push(current.right);
+  }
+  return occur;
 };
 
-treeValueCount(a,  6); // -> 3
+treeValueCount(a, 6); // -> 3

@@ -4,6 +4,7 @@
 #     self.left = None
 #     self.right = None
 
+# recursive version
 def all_tree_paths(root):
   if root is None:
     return []

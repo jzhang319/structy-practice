@@ -16,8 +16,6 @@ def has_path(graph, src, dst, visited):
       return True
   return False
 
-
-
 def build_graph(edges):
   graph = {}
 

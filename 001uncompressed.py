@@ -11,4 +11,4 @@ def uncompressed(s):
         result.append(s[j] * num)
         j += 1
         i = j
-    return result
+    return ''.join(result)

@@ -6,4 +6,4 @@ def pair_sum(numbers, target_sum):
 
     if complement in previous_numbers:
       return (previous_numbers[complement], index)
-    previous_numbers[num] = index
+    previous_numbers[num] = indexf

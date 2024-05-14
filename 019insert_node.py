@@ -5,7 +5,7 @@ class Node:
 
 # iterative solution
 def insert_node(head, value, index):
-  if index = 0:
+  if index == 0:
     new_head = Node(value)
     new_head.next = head
     return new_head
